@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>GeoTagApp</title>
+		<link rel='stylesheet' href='./stylesheets/style.css'/>
+	</head>
+
+	<body>
+
+		<header>
+			<img src="./images/location.png" width="100"
+					alt="an image of a map and location">
+			<h1>GeoTagApp</h1>
+			<nav>
+				<a href="#">About</a> | <a href="#">Help</a> | <a
+					href="/">Home</a>
+			</nav>
+		</header>
+<main>
+
+	<section class="tagging">
+				<h2>Tagging </h2>
+
+				<!-- ############### Aufgabe1a Form1 Start -->
+				
+				<form id="tag-form" action="/tagging" method="post">
+					
+				<fieldset>
+					<legend>Enter new GeoTag</legend>
+					
+						<label for="tagging_latitide"></label>
+				 		latitude: <input class= "tagging" id="tagging_latitude" type="text"
+						placeholder="Position"	size="10" required > 
+					
+						
+						<label for="tagging_longitude"></label>
+						longitude: <input class= "tagging" name="longitude" id="tagging_longitude" type="text"
+						placeholder="Position" size="10" required > 
+					
+						<label for="tagging_name"></label>
+						name: <input class= "tagging" name="name" id="tagging_name" type="text" placeholder="Ein Name" size="10" pattern="[aA-zZ]{10}" required > 
+				
+						<label for="tagging_hashtag"></label>
+						hashtag: <input class= "tagging" name="hashtag" id="tagging_hashtag" type="text" placeholder="#etwas" patterm="[#]{1} [A-Z]{10}" > <!-- TODO 1. Zeiche # --> 
+					
+						<label for="tagging_submit"></label>
+						<input class= "tagging" id="tagging_submit" type="submit"  value="submit">
+					
+				</fieldset>
+				</form>
+
+				<!-- ############### Aufgabe1a Form1 Ende -->
+				
+
+			</section>
+
+			<section class="discovery">
+<!-- ############### Aufgabe1a Form2 Start -->
+				<form id="filter-form" action="/discovery" method="post">
+					<h2>Discovery</h2>
+<fieldset>
+	    <legend>Filter by Searchterm</legend>
+							
+						<label for="discovery_search" ></label>
+					  <input class= "discovery" name="discovery_search" id="discovery_search" type="text" placeholder="search term" > 
+						
+						<label for="discovery_apply"></label>
+						<input clas= "discovery" name="discovery_apply" type="submit"
+						id="discovery_apply" 
+						value="apply">
+				  </fieldset>
+			  </form>
+				<!-- ############### Aufgabe1a Form2 Ende -->
+
+				<div class="taglist">
+					<ul id="results">
+						<li>Castle (49.01379, 8.404435) #sight</li>
+						<li>IWI (49.01379, 8.390071) #edu</li>
+					</ul>
+				</div>
+
+				<div class="tagmap">
+				  <img id="result-img" src="./images/mapview.jpg" alt="a map with locations"/>
+					<div class="caption">Result map</div>
+				</div>
+
+  </section>
+
+		</main>
+
+		<footer>
+			<span>2017 by LKIT</span>
+		</footer>
+
+	</body>
+</html>
